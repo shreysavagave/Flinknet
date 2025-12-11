@@ -14,7 +14,7 @@ export default function LoginScreen() {
   const handleGoogleLogin = async () => {
     try {
       const redirectUrl = Linking.createURL("dashboard", {
-        scheme: "myapp",
+        scheme: "threads",
       });
 
       const { createdSessionId, setActive } =

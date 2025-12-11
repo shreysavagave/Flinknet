@@ -14,8 +14,8 @@ import {
 const clerkPublishableKey = process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY;
 
 
-import {ConvexReactClient} from 'convex/react';
-import {ConvexProviderWithClerk, convexProviderWithClerk} from 'convex/react-clerk';
+import { ConvexReactClient } from 'convex/react';
+import { ConvexProviderWithClerk } from 'convex/react-clerk';
 
 const convex = new ConvexReactClient(process.env.EXPO_PUBLIC_CONVEX_URL,{unsavedChangesWarning:false});
 
