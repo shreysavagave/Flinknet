@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Threads",
-    "slug": "Threads",
+    "slug": "threads",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -38,11 +38,23 @@
             "backgroundColor": "#000000"
           }
         }
-      ]
+      ],
+      "expo-font"
     ],
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "31624917-7104-40ba-95a4-7429c3ce4eaa"
+      },
+      "clerkPublishableKey": "pk_test_bGlrZWQtbGFkeWJ1Zy03Ni5jbGVyay5hY2NvdW50cy5kZXYk",
+      "expo": {
+        "scheme": "threads"
+      }
+    },
+    "owner": "shrey2711"
   }
 }
