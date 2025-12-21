@@ -10,7 +10,7 @@ WebBrowser.maybeCompleteAuthSession();
 export default function LoginScreen() {
 
   const { startOAuthFlow } = useOAuth({ strategy: "oauth_google" });
-
+  
   const handleGoogleLogin = async () => {
     try {
       const redirectUrl = Linking.createURL("dashboard", {
