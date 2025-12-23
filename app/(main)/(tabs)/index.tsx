@@ -1,9 +1,9 @@
 // This file must be located at app/index.tsx
 import { useAuth } from "@clerk/clerk-expo";
 import { Button, Text, View } from "react-native";
-import "./globals.css";
+import "../../globals.css";
 
-export default function AppIndex() {
+export default function index() {
   const { signOut, userId } = useAuth();
 
   const handleSignOut = async () => {
