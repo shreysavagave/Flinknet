@@ -13,7 +13,7 @@ export default function LoginScreen() {
   
   const handleGoogleLogin = async () => {
     try {
-      const redirectUrl = Linking.createURL("dashboard", {
+      const redirectUrl = Linking.createURL("", {
         scheme: "threads",
       });
 

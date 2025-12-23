@@ -17,7 +17,7 @@ export default function AuthLayout() {
 
   // If already logged in, redirect the user away from the auth pages to the home page (/)
   if (isSignedIn) {
-    return <Redirect href="/" />;
+    return <Redirect href="/(main)" />;
   }
 
   // If not signed in, allow the auth content (Login screen) to show

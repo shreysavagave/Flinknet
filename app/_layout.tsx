@@ -31,23 +31,22 @@ const InitialLayout = () => {
     DMSans_700Bold,
   });
 
-  // Effect for handling redirects based on authentication status
   useEffect(() => {
     if (!isLoaded || !fontsLoaded) return;
 
-    const inAuthGroup = segments[0] === 'auth'; 
+    const inAuthGroup = segments[0] === '(auth)'; 
 
     if (isSignedIn) {
       if (inAuthGroup) {
-        router.replace('/');
+        router.replace('/(main)');
       }
     } 
     else if (!isSignedIn) {
       if (!inAuthGroup) {
-        router.replace('/auth');
+        router.replace('/(auth)');
       }
     }
-  }, [isSignedIn, isLoaded, fontsLoaded, segments, router]);
+  }, [isSignedIn]);
 
   if (!fontsLoaded || !isLoaded) {
     return (
@@ -57,11 +56,9 @@ const InitialLayout = () => {
     );
   }
 
-  // <Slot /> renders the child route that matches the current URL.
   return <Slot />;
 };
 
-// --- RootLayout Component: Sets up Clerk Context ---
 export default function RootLayout() {
   if (!clerkPublishableKey) {
      console.error("Clerk Publishable Key is missing!");
