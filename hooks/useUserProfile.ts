@@ -1,0 +1,13 @@
+import { api } from "@/convex/_generated/api";
+import { useUser } from "@clerk/clerk-react";
+import { useQuery } from "convex/react";
+
+export function useUserProfile(){
+    const {user} = useUser();
+
+    const clerkId = user?.id
+
+    const userProfile = useQuery(api.users.getUserByClerkId ,{ClerkId: clerkId})
+
+    return { userProfile}
+}
